@@ -1,4 +1,4 @@
-module duotone
+module github.com/Easy1000/duotone
 
 go 1.24.4
 
