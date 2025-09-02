@@ -19,9 +19,9 @@ Currently supports **Linux**.
 
 4. Move it to a directory in your PATH, for example
 
-```bash
-sudo mv duotone /usr/local/bin/
-```
+   ```bash
+   sudo mv duotone /usr/local/bin/
+   ```
 
 ### 2. Install via Go
 
