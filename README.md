@@ -9,20 +9,20 @@ Currently supports **Linux**.
 
 ## Installation
 
-### 1. Download Binary (Linux only)
+### 1. Install via `.deb` Package (Linux)
 
 1. Go to the [Releases](https://github.com/Easy1000/duotone/releases) page.
-2. Download the latest binary for Linux.
-3. Make it executable:
+2. Download the latest `.deb` package (e.g. `duotone_0.1.2_amd64.deb`).
+3. Install it using `dpkg`:
 
    ```bash
-   chmod +x duotone
+   sudo dpkg -i duotone_0.1.2_amd64.deb
    ```
 
-4. Move it to a directory in your PATH, for example
+4. Verify installation:
 
    ```bash
-   sudo mv duotone /usr/local/bin/
+   duotone --help
    ```
 
 ### 2. Install via Go
