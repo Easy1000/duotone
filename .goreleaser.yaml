@@ -8,6 +8,12 @@
 
 project_name: duotone
 
+before:
+  hooks:
+    - mkdir -p dist/completions
+    - go run . completion bash > dist/completions/duotone.bash
+    - go run . completion zsh  > dist/completions/_duotone
+
 builds:
   - id: duotone
     main: .
@@ -32,10 +38,10 @@ nfpms:
     homepage: "https://github.com/Easy1000/duotone"
     bindir: "/usr/local/bin"
     contents:
-      - src: ./completion/duotone.bash
+      - src: ./dist/completions/duotone.bash
         dst: /etc/bash_completion.d/duotone
         type: config
-      - src: ./completion/_duotone
+      - src: ./dist/completions/_duotone
         dst: /usr/share/zsh/site-functions/_duotone
         type: config
 # version: 1
