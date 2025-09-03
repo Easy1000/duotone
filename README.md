@@ -3,6 +3,8 @@
 A simple command-line tool to apply a **duotone effect** on images.  
 Currently supports **Linux**.
 
+> ⚡ This project is inspired by the duotone profile pictures people are currently using as a show of support for the protests in Indonesia.
+
 ---
 
 ## Installation
