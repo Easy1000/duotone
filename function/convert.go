@@ -60,7 +60,7 @@ func Convert(imagePath string) {
 
 	// Save result
 	ext := filepath.Ext(imagePath)
-	outputPath := "duotone.jpg"
+	outputPath := "duotone_" + imagePath
 	out, err := os.Create(outputPath)
 	if err != nil {
 		log.Fatal(err)
@@ -74,6 +74,7 @@ func Convert(imagePath string) {
 		err = jpeg.Encode(out, newImg, &jpeg.Options{Quality: 95})
 	}
 
+	fmt.Println("Converted image:", outputPath)
 	if err != nil {
 		log.Fatal(err)
 	}
