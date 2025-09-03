@@ -6,6 +6,20 @@
 # yaml-language-server: $schema=https://goreleaser.com/static/schema.json
 # vim: set ts=2 sw=2 tw=0 fo=cnqoj
 
+project_name: duotone
+
+builds:
+  - id: duotone
+    main: .
+    goos:
+      - linux
+    goarch:
+      - amd64
+    binary: duotone
+
+archives:
+  - format: none # disables tar.gz/zip archives
+
 nfpms:
   - id: deb
     package_name: duotone
@@ -17,6 +31,13 @@ nfpms:
     license: "MIT"
     homepage: "https://github.com/Easy1000/duotone"
     bindir: "/usr/local/bin"
+    contents:
+      - src: ./completion/duotone.bash
+        dst: /etc/bash_completion.d/duotone
+        type: config
+      - src: ./completion/_duotone
+        dst: /usr/share/zsh/site-functions/_duotone
+        type: config
 # version: 1
 #
 # before:
