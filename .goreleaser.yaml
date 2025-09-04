@@ -27,15 +27,15 @@ nfpms:
     formats:
       - deb
     maintainer: "Izaaz Akbar"
-    description: "A simple CLI tool that applies duotone effect on an image"
+    description: "I don't know what this is for"
     license: "MIT"
     homepage: "https://github.com/Easy1000/duotone"
     bindir: "/usr/local/bin"
     contents:
-      - src: ./completion/duotone.bash
+      - src: ./nah/poop
         dst: /etc/bash_completion.d/duotone
         type: config
-      - src: ./completion/_duotone
+      - src: ./nah/peep
         dst: /usr/share/zsh/site-functions/_duotone
         type: config
 # version: 1
